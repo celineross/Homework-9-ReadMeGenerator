@@ -4,7 +4,45 @@ const inq = require("inquirer");
 const util = require("util");
 const generateMarkdown = require("./utils/generateMarkdown");
 
+function generateMarkdown(questions) {
+    return `
+    # ${questions.title}
 
+    ${questions.badge}
+
+    <br>
+
+    ## Table of Contents
+
+    * [Author](#author)
+    * [Description](#description)
+    * [Screenshot](#screenshot)
+    * [Requirements](#requirements)
+    * [Installation](#installation)
+    * [Usage](#usage)
+    * [License](#license)
+    * [Contribution](#contribution)
+    * [Test](#test)
+    * [Questions](#questions)
+    
+    <br>
+    <br>
+
+    ## Author
+    ${questions.author}
+    ${questions.github}
+
+    ## Description
+
+    ## Screenshot
+
+    ## Requirements
+
+    ## Installation
+
+    
+    `
+}
 
 async function init() {
     try {
@@ -48,7 +86,7 @@ async function init() {
             {
                 type: "input",
                 name: "install",
-                message: "How do I use this app? "
+                message: "How do I start using this app? "
             },
             {
                 type: "input",
@@ -87,4 +125,5 @@ async function init() {
     }
 }
 
+//function call to start prompts
 init();
