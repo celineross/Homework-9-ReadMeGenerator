@@ -10,8 +10,6 @@ function generateMarkdown(questions) {
 
     ${questions.badge}
 
-    <br>
-
     ## Table of Contents
 
     * [Author](#author)
@@ -24,9 +22,7 @@ function generateMarkdown(questions) {
     * [Contribution](#contribution)
     * [Test](#test)
     * [Questions](#questions)
-    
-    <br>
-    <br>
+
 
     ## Author
     * ${questions.author}
