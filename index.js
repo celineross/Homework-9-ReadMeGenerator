@@ -2,8 +2,8 @@
 const fs = require("fs");
 const inq = require("inquirer");
 const util = require("util");
-const generateMarkdown = require("./utils/generateMarkdown");
 
+//function to add all information to the readme
 function generateMarkdown(questions) {
     return `
     # ${questions.title}
@@ -29,24 +29,43 @@ function generateMarkdown(questions) {
     <br>
 
     ## Author
-    ${questions.author}
-    ${questions.github}
+    * ${questions.author}
+    * ${questions.github}
 
     ## Description
+    * ${questions.desc}
 
     ## Screenshot
+    * ${questions.ss}
 
     ## Requirements
+    * ${questions.reqs}
 
     ## Installation
+    * ${questions.install}
 
-    
+    ## Usage
+    * ${questions.usage}
+
+    ## License
+    * ${questions.license}
+
+    # Contribution
+    * ${questions.contr}
+
+    ## Test
+    * ${questions.test}
+
+    ## Questions
+    * ${questions.queries}
     `
 }
 
+//initialization function
 async function init() {
     try {
-        const questions = await inquirer.prompt([
+        //prompts for user
+        const questions = await inq.prompt([
             {
                 type: "input",
                 name: "title",
@@ -75,7 +94,7 @@ async function init() {
             },
             {
                 type: "input",
-                name: "photo",
+                name: "ss",
                 message: "Screenshot of project: "
             },
             {
@@ -95,7 +114,7 @@ async function init() {
             },
             {
                 type: "input",
-                input: "license",
+                name: "license",
                 message: "What license does your project use? (ISC, GLP, etc.) "
             },
             {
