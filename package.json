@@ -1,0 +1,19 @@
+{
+  "name": "hw9",
+  "version": "1.0.0",
+  "description": "initialize homework 9",
+  "main": "index.js",
+  "scripts": {
+    "test": "hello world"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/celineross/Homework-9-ReadMeGenerator.git"
+  },
+  "author": "celine ross",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/celineross/Homework-9-ReadMeGenerator/issues"
+  },
+  "homepage": "https://github.com/celineross/Homework-9-ReadMeGenerator#readme"
+}
