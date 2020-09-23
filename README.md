@@ -1,7 +1,5 @@
 
-    # ReadMe Generator
-
-    
+    # ReadMe Generator    
 
     ## Table of Contents
 
@@ -25,7 +23,7 @@
     * This project aids in creating readme files in a quick and efficient way. Instead of creating one manually, you can input your parameters in a command prompt and it will format it accordingly.
 
     ## Screenshot
-    * 
+    * ![Screenshot](assets/ss.png)
 
     ## Requirements
     * Inquirer, Util
